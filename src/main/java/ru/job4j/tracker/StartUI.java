@@ -23,11 +23,11 @@ public class StartUI {
             } else if (select == 2) {
                 System.out.print("Enter id: ");
                 int id = Integer.parseInt(scanner.nextLine());
-                if (tracker.findById(id) != null) {
-                    System.out.print("Enter new item's name: ");
-                    String name = scanner.nextLine();
-                    Item item = new Item(name);
-                    tracker.replace(id, item);
+                System.out.print("Enter new item's name: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                if (tracker.replace(id, item)) {
+                    System.out.println("Item has been replaced");
                 } else {
                     System.out.println("Id not found");
                 }
