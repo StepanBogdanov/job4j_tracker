@@ -2,6 +2,12 @@ package ru.job4j.tracker;
 
 public class FindByKea implements UserAction{
 
+    private final Output out;
+
+    public FindByKea(Output out) {
+        this.out = out;
+    }
+
     @Override
     public String name() {
         return "=== Find Items by name ===";
