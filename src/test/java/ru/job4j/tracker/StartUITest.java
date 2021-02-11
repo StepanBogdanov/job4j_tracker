@@ -54,4 +54,20 @@ public class StartUITest {
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
+
+    /*@Test
+    public void whenShowAll() {
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("New Item"));
+        Input in = new StubInput(
+                new String[] {"0", "1"}
+        );
+        Output out = new StubOutput();
+        UserAction[] actions = {
+                new ShowAction(out),
+                new Exit()
+        };
+        new StartUI(out).init(in, tracker, actions);
+        assertThat();
+    }*/
 }

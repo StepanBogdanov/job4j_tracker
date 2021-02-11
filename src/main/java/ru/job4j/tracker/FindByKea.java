@@ -19,10 +19,10 @@ public class FindByKea implements UserAction{
         Item[] items = tracker.findByName(name);
         if (items.length > 0) {
             for (Item item : items) {
-                System.out.println(item);
+                out.println(item);
             }
         } else {
-            System.out.println("Name not found");
+            out.println("Name not found");
         }
         return true;
     }
