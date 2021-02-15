@@ -13,7 +13,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "Item name", "1"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getInstance();
         UserAction[] actions = {
                 new CreateAction(out),
                 new Exit()
@@ -24,7 +24,7 @@ public class StartUITest {
 
     @Test
     public void whenReplaceItem() {
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getInstance();
         Item item = tracker.add(new Item("Replaced item"));
         String replacedName = "New item name";
         Output out = new ConsoleOutput();
@@ -41,7 +41,7 @@ public class StartUITest {
 
     @Test
     public void whenDeleteItem() {
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getInstance();
         Item item = tracker.add(new Item("Deleted item"));
         Output out = new ConsoleOutput();
         Input in = new StubInput(
@@ -57,7 +57,7 @@ public class StartUITest {
 
     @Test
     public void whenShowAll() {
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getInstance();
         Item item = tracker.add(new Item("New Item"));
         Input in = new StubInput(
                 new String[] {"0", "1"}
@@ -82,7 +82,7 @@ public class StartUITest {
 
     @Test
     public void whenFyndById() {
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getInstance();
         Item item = tracker.add(new Item("New Item"));
         Input in = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"}
@@ -107,7 +107,7 @@ public class StartUITest {
 
     @Test
     public void whenFyndByKey() {
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getInstance();
         Item item = tracker.add(new Item("New Item"));
         Input in = new StubInput(
                 new String[] {"0", item.getName(), "1"}
@@ -136,7 +136,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"1", "0"}
         );
-        Tracker tracker = new Tracker();
+        Tracker tracker = Tracker.getInstance();
         UserAction[] actions = {
                 new Exit()
         };
