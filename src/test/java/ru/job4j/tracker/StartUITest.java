@@ -58,8 +58,7 @@ public class StartUITest {
 
     @Test
     public void whenShowAll() {
-        Tracker tracker = Tracker.getInstance();
-        tracker.clearItems();
+        Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("New Item"));
         Input in = new StubInput(
                 new String[] {"0", "1"}

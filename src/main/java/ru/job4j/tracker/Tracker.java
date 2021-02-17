@@ -8,15 +8,6 @@ public class Tracker {
     private List<Item> items = new ArrayList<>();
     private int ids = 1;
 
-    private Tracker() {
-
-    }
-
-    public List<Item> clearItems() {
-        items.clear();
-        return items;
-    }
-
     public static Tracker getInstance() {
         if (instance == null) {
             instance = new Tracker();
@@ -64,7 +55,7 @@ public class Tracker {
         int index = indexOf(id);
         boolean rsl = index != -1;
         if (rsl) {
-            item.setId(items.get(index).getId());
+            item.setId(id);
             items.set(index, item);
         }
         return rsl;
