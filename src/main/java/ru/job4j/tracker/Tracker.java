@@ -1,16 +1,20 @@
 package ru.job4j.tracker;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Tracker {
     private static Tracker instance = null;
-    List<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
     private int ids = 1;
 
     private Tracker() {
 
+    }
+
+    public List<Item> clearItems() {
+        items.clear();
+        return items;
     }
 
     public static Tracker getInstance() {
