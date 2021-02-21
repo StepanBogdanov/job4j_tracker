@@ -1,6 +1,11 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
@@ -38,5 +43,37 @@ public class TrackerTest {
         int id = bug.getId();
         tracker.delete(id);
         assertThat(tracker.findById(id), is(nullValue()));
+    }
+
+    @Test
+    public void whenAscendSort() {
+        Tracker tracker = new Tracker();
+        tracker.add(new Item("C"));
+        tracker.add(new Item("B"));
+        tracker.add(new Item("A"));
+        tracker.ascendSortByName();
+        List<Item> items = tracker.findAll();
+        List<String> rsl= new ArrayList<>();
+        for (Item item : items) {
+            rsl.add(item.getName());
+        }
+        List<String> expected = Arrays.asList("A", "B", "C");
+        assertThat(rsl, is(expected));
+    }
+
+    @Test
+    public void whenDescendSort() {
+        Tracker tracker = new Tracker();
+        tracker.add(new Item("A"));
+        tracker.add(new Item("C"));
+        tracker.add(new Item("B"));
+        tracker.descentSortByName();
+        List<Item> items = tracker.findAll();
+        List<String> rsl= new ArrayList<>();
+        for (Item item : items) {
+            rsl.add(item.getName());
+        }
+        List<String> expected = Arrays.asList("C", "B", "A");
+        assertThat(rsl, is(expected));
     }
 }

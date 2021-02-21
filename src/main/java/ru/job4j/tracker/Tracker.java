@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Tracker {
@@ -68,5 +69,13 @@ public class Tracker {
             items.remove(index);
         }
         return rsl;
+    }
+
+    public void ascendSortByName() {
+        Collections.sort(items, new AscendSortByName());
+    }
+
+    public void descentSortByName() {
+        Collections.sort(items, new DescentSortByName());
     }
 }
