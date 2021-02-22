@@ -6,6 +6,6 @@ public class DescentSortByName implements Comparator<Item> {
 
     @Override
     public int compare(Item o1, Item o2) {
-        return -1 * o1.getName().compareTo(o2.getName());
+        return o2.getName().compareTo(o1.getName());
     }
 }
