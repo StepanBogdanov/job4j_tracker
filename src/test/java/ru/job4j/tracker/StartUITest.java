@@ -69,14 +69,14 @@ public class StartUITest {
         actions.add(new Exit());
         new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. === Show all items ===" + System.lineSeparator() +
-                        "1. === Exit ===" + System.lineSeparator() +
-                        "Item{id=" + item.getId() + ", name='" + item.getName() +
-                        "', created=" + item.getCreated() + "}" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. === Show all items ===" + System.lineSeparator() +
-                        "1. === Exit ===" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. === Show all items ===" + System.lineSeparator()
+                        + "1. === Exit ===" + System.lineSeparator()
+                        + "Item{id=" + item.getId() + ", name='" + item.getName()
+                        + "', created=" + item.getCreated() + "}" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. === Show all items ===" + System.lineSeparator()
+                        + "1. === Exit ===" + System.lineSeparator()
         ));
     }
 
@@ -91,16 +91,16 @@ public class StartUITest {
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindById(out));
         actions.add(new Exit());
-        new StartUI(out).init(in, tracker,actions);
+        new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. === Find an Item by Id ===" + System.lineSeparator() +
-                        "1. === Exit ===" + System.lineSeparator() +
-                        "Item{id=" + item.getId() + ", name='" + item.getName() +
-                        "', created=" + item.getCreated() + "}" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. === Find an Item by Id ===" + System.lineSeparator() +
-                        "1. === Exit ===" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. === Find an Item by Id ===" + System.lineSeparator()
+                        + "1. === Exit ===" + System.lineSeparator()
+                        + "Item{id=" + item.getId() + ", name='" + item.getName()
+                        + "', created=" + item.getCreated() + "}" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. === Find an Item by Id ===" + System.lineSeparator()
+                        + "1. === Exit ===" + System.lineSeparator()
         ));
     }
 
@@ -115,16 +115,16 @@ public class StartUITest {
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindByKea(out));
         actions.add(new Exit());
-        new StartUI(out).init(in, tracker,actions);
+        new StartUI(out).init(in, tracker, actions);
         assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() +
-                        "0. === Find Items by name ===" + System.lineSeparator() +
-                        "1. === Exit ===" + System.lineSeparator() +
-                        "Item{id=" + item.getId() + ", name='" + item.getName() +
-                        "', created=" + item.getCreated() + "}" + System.lineSeparator() +
-                        "Menu." + System.lineSeparator() +
-                        "0. === Find Items by name ===" + System.lineSeparator() +
-                        "1. === Exit ===" + System.lineSeparator()
+                "Menu." + System.lineSeparator()
+                        + "0. === Find Items by name ===" + System.lineSeparator()
+                        + "1. === Exit ===" + System.lineSeparator()
+                        + "Item{id=" + item.getId() + ", name='" + item.getName()
+                        + "', created=" + item.getCreated() + "}" + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. === Find Items by name ===" + System.lineSeparator()
+                        + "1. === Exit ===" + System.lineSeparator()
         ));
     }
 

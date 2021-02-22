@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.List;
 
-public class FindByKea implements UserAction{
+public class FindByKea implements UserAction {
 
     private final Output out;
 

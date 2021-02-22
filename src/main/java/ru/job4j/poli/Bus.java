@@ -1,6 +1,6 @@
 package ru.job4j.poli;
 
-public class Bus implements Transport, Vehicle{
+public class Bus implements Transport, Vehicle {
 
     @Override
     public void drive() {
@@ -9,7 +9,7 @@ public class Bus implements Transport, Vehicle{
 
     @Override
     public void passengers(int number) {
-        System.out.println("Везем " + number + " пассажира" );
+        System.out.println("Везем " + number + " пассажира");
     }
 
     @Override

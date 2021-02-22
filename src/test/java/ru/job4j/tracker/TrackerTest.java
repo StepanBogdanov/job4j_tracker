@@ -53,7 +53,7 @@ public class TrackerTest {
         tracker.add(new Item("A"));
         tracker.ascendSortByName();
         List<Item> items = tracker.findAll();
-        List<String> rsl= new ArrayList<>();
+        List<String> rsl = new ArrayList<>();
         for (Item item : items) {
             rsl.add(item.getName());
         }
@@ -69,7 +69,7 @@ public class TrackerTest {
         tracker.add(new Item("B"));
         tracker.descentSortByName();
         List<Item> items = tracker.findAll();
-        List<String> rsl= new ArrayList<>();
+        List<String> rsl = new ArrayList<>();
         for (Item item : items) {
             rsl.add(item.getName());
         }
