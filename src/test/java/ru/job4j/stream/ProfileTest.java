@@ -18,12 +18,15 @@ public class ProfileTest {
     public void setUp() {
         profiles.add(new Profile(new Address("Moscow", "Arbat", 33, 213)));
         profiles.add(new Profile(new Address("Rostov", "Lenina", 35, 12)));
+        profiles.add(new Profile(new Address("Moscow", "Arbat", 33, 213)));
+        profiles.add(new Profile(new Address("Arkhangelsk", "Sadovaya", 2, 45)));
     }
 
     @Test
     public void whenMapAddress() {
         List<Address> rsl = Profile.collect(profiles);
         List<Address> expected =  new ArrayList<>();
+        expected.add(new Address("Arkhangelsk", "Sadovaya", 2, 45));
         expected.add(new Address("Moscow", "Arbat", 33, 213));
         expected.add(new Address("Rostov", "Lenina", 35, 12));
         assertThat(rsl, is(expected));
