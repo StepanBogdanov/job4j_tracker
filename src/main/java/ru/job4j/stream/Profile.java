@@ -11,7 +11,7 @@ public class Profile {
         this.address = address;
     }
 
-    public static List<Address> collect(List<Profile> profiles){
+    public static List<Address> collect(List<Profile> profiles) {
         return profiles.stream()
                 .map(pr -> pr.address)
                 .collect(Collectors.toList());
