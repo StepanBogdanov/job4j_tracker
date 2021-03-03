@@ -17,7 +17,8 @@ public class School {
         return students.stream()
                 .collect(Collectors.toMap(
                         st -> st.getSurname(),
-                        st -> st
+                        st -> st,
+                        (s, a) -> s.equals(a) ? s : a
                 ));
     }
 }

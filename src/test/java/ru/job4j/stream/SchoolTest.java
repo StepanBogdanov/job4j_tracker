@@ -22,8 +22,10 @@ public class SchoolTest {
         students.add(new Student(30, "Surname3"));
         students.add(new Student(40, "Surname4"));
         students.add(new Student(50, "Surname5"));
+        students.add(new Student(50, "Surname5"));
         students.add(new Student(60, "Surname6"));
         students.add(new Student(70, "Surname7"));
+        students.add(new Student(80, "Surname7"));
         students.add(new Student(80, "Surname8"));
         students.add(new Student(90, "Surname9"));
     }
@@ -35,6 +37,7 @@ public class SchoolTest {
         List<Student> rsl = sc.collect(students, pr);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(70, "Surname7"));
+        expected.add(new Student(80, "Surname7"));
         expected.add(new Student(80, "Surname8"));
         expected.add(new Student(90, "Surname9"));
         assertThat(rsl, is(expected));
@@ -46,6 +49,7 @@ public class SchoolTest {
         Predicate<Student> pr = st -> st.getScore() >= 50 && st.getScore() < 70;
         List<Student> rsl = sc.collect(students, pr);
         List<Student> expected = new ArrayList<>();
+        expected.add(new Student(50, "Surname5"));
         expected.add(new Student(50, "Surname5"));
         expected.add(new Student(60, "Surname6"));
         assertThat(rsl, is(expected));
