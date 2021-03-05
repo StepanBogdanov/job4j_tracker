@@ -53,14 +53,14 @@ public class BankService {
      * @return банковский счет или null, если счет не найден
      */
     public Account findByRequisite(String passport, String requisite) {
-        try {
-            return users.get(findByPassport(passport)).stream()
+        User user = findByPassport(passport);
+        if (user != null) {
+            return users.get(user).stream()
                     .filter(ac -> ac.getRequisite().equals(requisite))
                     .findFirst()
                     .orElse(null);
-        } catch (NullPointerException e) {
-            return null;
         }
+        return null;
     }
 
     /**
