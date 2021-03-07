@@ -8,12 +8,12 @@ public class Profile {
 
     private Address address;
 
-    public Address getAddress() {
-        return address;
-    }
-
     public Profile(Address address) {
         this.address = address;
+    }
+
+    public Address getAddress() {
+        return address;
     }
 
     public static List<Address> collect(List<Profile> profiles) {
