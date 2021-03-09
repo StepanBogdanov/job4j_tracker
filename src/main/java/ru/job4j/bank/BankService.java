@@ -54,9 +54,8 @@ public class BankService {
             return users.get(user.get()).stream()
                     .filter(ac -> ac.getRequisite().equals(requisite))
                     .findFirst();
-        } else {
-            return Optional.empty();
         }
+        return Optional.empty();
     }
 
     /**
