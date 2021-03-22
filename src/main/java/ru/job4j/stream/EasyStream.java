@@ -9,7 +9,7 @@ public class EasyStream {
 
     private List<Integer> list;
 
-    public EasyStream(List<Integer> list) {
+    private EasyStream(List<Integer> list) {
         this.list = list;
     }
 
